@@ -5,6 +5,11 @@ VisualStudioVersion = 15.0.27428.2043
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TailingWebBrowser", "TailingWebBrowser\TailingWebBrowser.csproj", "{B52FD29B-0563-4429-B164-B631FD1BA571}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Doc", "Doc", "{56563A4A-FED8-4D63-A713-0AF773A3A1CD}"
+	ProjectSection(SolutionItems) = preProject
+		Doc\Interface.PNG = Doc\Interface.PNG
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
