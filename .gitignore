@@ -30,3 +30,7 @@
 *.exe
 *.out
 *.app
+/.vs/TailingWebBrowser/v15
+/packages
+/TailingWebBrowser/bin/Debug
+/TailingWebBrowser/obj/Debug
