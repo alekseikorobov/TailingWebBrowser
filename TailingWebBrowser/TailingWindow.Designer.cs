@@ -15,6 +15,7 @@
         {
             if (disposing && (components != null))
             {
+                hookKeybordHelper.Unhook();
                 components.Dispose();
             }
             base.Dispose(disposing);

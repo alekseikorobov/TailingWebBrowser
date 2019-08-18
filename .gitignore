@@ -34,3 +34,5 @@
 /packages
 /TailingWebBrowser/bin/Debug
 /TailingWebBrowser/obj/Debug
+/TailingWebBrowser/bin/Release
+/TailingWebBrowser/obj/Release
