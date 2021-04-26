@@ -34,6 +34,7 @@
             this.newTabctrltToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveSessionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loadSessionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.browserTabToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dockPanel1 = new WeifenLuo.WinFormsUI.Docking.DockPanel();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -54,7 +55,9 @@
             this.tabsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.newTabctrltToolStripMenuItem,
             this.saveSessionToolStripMenuItem,
-            this.loadSessionToolStripMenuItem});
+            this.loadSessionToolStripMenuItem,
+            this.browserTabToolStripMenuItem,
+            });
             this.tabsToolStripMenuItem.Name = "tabsToolStripMenuItem";
             this.tabsToolStripMenuItem.Size = new System.Drawing.Size(50, 24);
             this.tabsToolStripMenuItem.Text = "Tabs";
@@ -79,6 +82,14 @@
             this.loadSessionToolStripMenuItem.Size = new System.Drawing.Size(191, 26);
             this.loadSessionToolStripMenuItem.Text = "Load session";
             this.loadSessionToolStripMenuItem.Click += new System.EventHandler(this.loadSessionToolStripMenuItem_Click);
+            
+            // 
+            // loadSessionToolStripMenuItem
+            // 
+            this.browserTabToolStripMenuItem.Name = "browserTabToolStripMenuItem";
+            this.browserTabToolStripMenuItem.Size = new System.Drawing.Size(191, 26);
+            this.browserTabToolStripMenuItem.Text = "browser Tab";
+            this.browserTabToolStripMenuItem.Click += new System.EventHandler(this.browserTabToolStripMenuItem_Click);
             // 
             // dockPanel1
             // 
@@ -116,5 +127,6 @@
         private WeifenLuo.WinFormsUI.Docking.DockPanel dockPanel1;
         private System.Windows.Forms.ToolStripMenuItem saveSessionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem loadSessionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem browserTabToolStripMenuItem;
     }
 }

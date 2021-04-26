@@ -25,13 +25,11 @@ namespace TailingWebBrowser
         {
             InitializeComponent();
 
-            CefSettings cefSettings = new CefSettings();
-            cefSettings.CachePath = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + @"\CEF";
-
-            Cef.Initialize(cefSettings);
-
             hookKeybordHelper = new HookKeybordHelper(this);
             hookKeybordHelper.SetHook();
+
+            //newTabctrltToolStripMenuItem_Click(null, null);
+            browserTabToolStripMenuItem_Click(null, null);
         }
 
         private void TailingWindow_Deactivate(object sender, EventArgs e)
@@ -47,19 +45,10 @@ namespace TailingWebBrowser
 
         private void newTabctrltToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            NewTab n = new NewTab();
-
-            var res = n.ShowDialog();
-            if (res == DialogResult.OK)
-            {
-                ChromiumTab cr = new ChromiumTab(n.textBoxUrl.Text);
-                cr.Show(dockPanel1);
-                cr.DockHandler.GetPersistStringCallback = () =>
-                {
-                    return n.textBoxUrl.Text;
-                };
-            }
+            WindowsFormsCatchWin.Form1 f = new WindowsFormsCatchWin.Form1();
+            f.Show(dockPanel1);
         }
+
         private void saveSessionToolStripMenuItem_Click(object sender, EventArgs e)
         {
             dockPanel1.SaveAsXml("session.xml");
@@ -74,11 +63,12 @@ namespace TailingWebBrowser
         IDockContent GetContentFromPersistString(string persistString)
         {
             return new ChromiumTab(persistString);
+            //return new WindowsFormsCatchWin.Form1();
         }
 
         private void TailingWindow_FormClosing(object sender, FormClosingEventArgs e)
         {
-            saveSessionToolStripMenuItem_Click(sender, e);
+            Cef.Shutdown();
         }
         private void FullScreenshot(String filepath, String filename, ImageFormat format)
         {
@@ -116,6 +106,15 @@ namespace TailingWebBrowser
                 bitmap.Save(fullpath, format);
             }
         }
-      
+
+        private void browserTabToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ChromiumTab cr = new ChromiumTab("google.com");
+            cr.Show(dockPanel1);
+            cr.DockHandler.GetPersistStringCallback = () =>
+            {
+                return "google.com";
+            };
+        }
     }
 }
