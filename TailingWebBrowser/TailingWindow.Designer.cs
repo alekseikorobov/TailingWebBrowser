@@ -54,10 +54,9 @@
             // 
             this.tabsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.newTabctrltToolStripMenuItem,
-            this.saveSessionToolStripMenuItem,
-            this.loadSessionToolStripMenuItem,
             this.browserTabToolStripMenuItem,
-            });
+            this.saveSessionToolStripMenuItem,
+            this.loadSessionToolStripMenuItem});
             this.tabsToolStripMenuItem.Name = "tabsToolStripMenuItem";
             this.tabsToolStripMenuItem.Size = new System.Drawing.Size(50, 24);
             this.tabsToolStripMenuItem.Text = "Tabs";
@@ -65,30 +64,29 @@
             // newTabctrltToolStripMenuItem
             // 
             this.newTabctrltToolStripMenuItem.Name = "newTabctrltToolStripMenuItem";
-            this.newTabctrltToolStripMenuItem.Size = new System.Drawing.Size(191, 26);
-            this.newTabctrltToolStripMenuItem.Text = "New Tab (ctrl+t)";
+            this.newTabctrltToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.newTabctrltToolStripMenuItem.Text = "New Tab";
             this.newTabctrltToolStripMenuItem.Click += new System.EventHandler(this.newTabctrltToolStripMenuItem_Click);
             // 
             // saveSessionToolStripMenuItem
             // 
             this.saveSessionToolStripMenuItem.Name = "saveSessionToolStripMenuItem";
-            this.saveSessionToolStripMenuItem.Size = new System.Drawing.Size(191, 26);
+            this.saveSessionToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.saveSessionToolStripMenuItem.Text = "Save session";
             this.saveSessionToolStripMenuItem.Click += new System.EventHandler(this.saveSessionToolStripMenuItem_Click);
             // 
             // loadSessionToolStripMenuItem
             // 
             this.loadSessionToolStripMenuItem.Name = "loadSessionToolStripMenuItem";
-            this.loadSessionToolStripMenuItem.Size = new System.Drawing.Size(191, 26);
+            this.loadSessionToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.loadSessionToolStripMenuItem.Text = "Load session";
             this.loadSessionToolStripMenuItem.Click += new System.EventHandler(this.loadSessionToolStripMenuItem_Click);
-            
             // 
-            // loadSessionToolStripMenuItem
+            // browserTabToolStripMenuItem
             // 
             this.browserTabToolStripMenuItem.Name = "browserTabToolStripMenuItem";
-            this.browserTabToolStripMenuItem.Size = new System.Drawing.Size(191, 26);
-            this.browserTabToolStripMenuItem.Text = "browser Tab";
+            this.browserTabToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.browserTabToolStripMenuItem.Text = "New browser Tab";
             this.browserTabToolStripMenuItem.Click += new System.EventHandler(this.browserTabToolStripMenuItem_Click);
             // 
             // dockPanel1

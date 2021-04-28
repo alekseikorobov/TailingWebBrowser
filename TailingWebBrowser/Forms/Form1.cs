@@ -17,9 +17,6 @@ namespace WindowsFormsCatchWin
 {
     public partial class Form1 : WeifenLuo.WinFormsUI.Docking.DockContent
     {
-        // импорт WinApi функций и констант
-        
-
         private IntPtr appHandle; // Handle окна другого приложения
         public Form1()
         {
@@ -28,6 +25,18 @@ namespace WindowsFormsCatchWin
             this.Resize += this.Form1_Resize;
 
             contextMenuStrip1_Opening(null, null);
+
+            this.Load += Form1_Load;
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            if(this.DockPanel == null)
+            {
+                MessageBox.Show("This from not link with DockPanel","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                return;
+            }
+            this.DockPanel.ContextMenuStrip = contextMenuStrip2;
         }
 
         private void Form1_Resize(object sender, EventArgs e)
@@ -38,10 +47,6 @@ namespace WindowsFormsCatchWin
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            SetParented();
-        }
 
         bool isParented = true;
 
@@ -109,7 +114,7 @@ namespace WindowsFormsCatchWin
         private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
         {
             contextMenuStrip1.Items.Clear();
-            
+
 
             EventHandler eventHandler = new System.EventHandler(this.comboBox1_SelectedIndexChanged);
 
@@ -124,6 +129,11 @@ namespace WindowsFormsCatchWin
         {
             if (appHandle != IntPtr.Zero && !isParented)
                 UnParent();
+        }
+
+        private void unparentToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SetParented();
         }
     }
 }

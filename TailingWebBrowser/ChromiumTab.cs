@@ -26,6 +26,15 @@ namespace TailingWebBrowser
             InitializeChromium();
             chromiumWebBrowser.IsBrowserInitializedChanged += this.ChromiumWebBrowser_IsBrowserInitializedChanged;
             chromiumWebBrowser.AddressChanged += ChromiumWebBrowser_AddressChanged;
+            chromiumWebBrowser.TitleChanged += ChromiumWebBrowser_TitleChanged;
+        }
+
+        private void ChromiumWebBrowser_TitleChanged(object sender, TitleChangedEventArgs e)
+        {
+            this.Invoke((MethodInvoker)delegate
+            {
+                this.Text = e.Title;
+            });
         }
 
         private void ChromiumWebBrowser_IsBrowserInitializedChanged(object sender, IsBrowserInitializedChangedEventArgs args)
