@@ -14,7 +14,6 @@
 # Compiled Dynamic libraries
 *.so
 *.dylib
-*.dll
 
 # Fortran module files
 *.mod
@@ -27,14 +26,16 @@
 *.lib
 
 # Executables
-*.exe
+
 *.out
 *.app
 /.vs/TailingWebBrowser/v15
 /packages
 /TailingWebBrowser/bin/Debug
 /TailingWebBrowser/obj/Debug
-/TailingWebBrowser/bin/Release
+/TailingWebBrowser/bin/Release/x86
+/TailingWebBrowser/bin/Release/x64
+/TailingWebBrowser/bin/Release/app.publish
 /TailingWebBrowser/obj/Release
 /TailingWebBrowser/obj/x86/Debug
 /TailingWebBrowser/bin/x86/Debug
