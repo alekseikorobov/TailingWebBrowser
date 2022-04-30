@@ -37,11 +37,11 @@ namespace TailingWebBrowser
             });
         }
 
-        private void ChromiumWebBrowser_IsBrowserInitializedChanged(object sender, IsBrowserInitializedChangedEventArgs args)
+        private void ChromiumWebBrowser_IsBrowserInitializedChanged(object sender, EventArgs args)
         {
-            if (args.IsBrowserInitialized)
-            {
-            }
+            //if (args.IsBrowserInitialized)
+            //{
+            //}
         }
 
         private void InitializeChromium()
